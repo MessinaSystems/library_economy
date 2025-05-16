@@ -1,8 +1,7 @@
 # library Economy test
 
 # Instructions 
-The instructions are based on the link here: https://wiki.koha-community.org/wiki/Koha_on_Debian for koha 24.11 on Ubuntu 22 LTS server
-This is an example bike library
+The instructions are based on the link here: https://wiki.koha-community.org/wiki/Koha_on_Debian for koha 24.11 on Ubuntu 22 LTS server. This is an example bike library
 
 ## Pre configuration
 `sudo apt update && sudo apt upgrade -y`
@@ -32,24 +31,24 @@ This is an example bike library
 `sudo a2dissite 000-default`
 
 ## Creating a Koha instance
-'sudo koha-create --create-db bikelibrary'
-'sudo koha-plack --enable bikelibrary'
-'sudo koha-plack --start bikelibrary'
-'sudo systemctl restart apache2'
+'sudo koha-create --create-db bikelibrary'<br>
+'sudo koha-plack --enable bikelibrary'<br>
+'sudo koha-plack --start bikelibrary'<br>
+'sudo systemctl restart apache2'<br>
 
 ## Get Username and password
 `sudo koha-passwd bikelibrary`
-# Username for temp: koha_bikelibrary
-# Password for temp: randompasswordtext
-# Press enter to clear the screen...
+## Username for temp: koha_bikelibrary
+## Password for temp: randompasswordtext
+## Press enter to clear the screen...
 
 ## Adjust firewall to allow access to public 
-sudo ufw allow 80
-sudo ufw allow 443
+'sudo ufw allow 80'
+'sudo ufw allow 443'
 
 ### Create A Records in crazy domains for:
-#bikelibrary.website.com
-#bikelibrary-intra.website.com
+## bikelibrary.website.com
+## bikelibrary-intra.website.com
 
 # Adding https to domainname (after all other instructions) 
 sudo apt install certbot python3-certbot-apache -y
